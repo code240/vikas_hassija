@@ -1,0 +1,62 @@
+PhD. (Thesis submission in process) JIIT, Noida (co-supervised by Dr. Vinay Chamola, BITS-Pilani).	      Aug. 2018 – Present
+
+M.S. (Tele-Communication and Software Engg.), BITS-Pilani, Rajasthan.                            	   Jun. 2012 – Jun. 2014
+
+B.E. (Hons) Information Technology, BRCM-CET, MDU, Rohtak.                                                                    Aug. 2006 – May 2010
+
+
+Experience
+Research Intern, UNSW, Sydney, Australia	   June2020 – July2020	
+Research Intern, University of Kentucky, USA	   June2020 – July2020	
+Research Intern, National University Singapore (NUS), Singapore (Prof. Dusit Niyato IEEE fellow)    Aug 2020 – Jan2021	
+Assistant Professor, Jaypee Institute of Information technology, Noida, India	       Aug. 2018 – Present
+
+Senior Automation Engineer, BOLD Technologies Pvt. Ltd., Noida	      Dec 2015 – July 2018
+
+Senior Automation Engineer, Pulp Strategy Pvt. Ltd., New Delhi	      Jan 2015 – Dec 2015
+
+Automation Engineer, LiveCareer India Ltd., Noida	      Feb 2014 – Jan 2015
+
+Software Engineer, Tech Mahindra (Tech M), Noida	    Mar 2011 – Feb 2014
+
+
+Research Interests: 
+Blockchain, Quantum Computing, Quantum resistant blockchain, Advanced blockchain, Distributed computing, Internet of Things Security, and 5G Communications.
+
+Courses Taught: 
+Blockchain Technology, Cloud based enterprise systems, Information security
+
+Awards / Honours: 
+1.	Completed Ph.D. at JIIT in three years (with 4 SCI Journals).
+2.	Reviewer for the following journals: IEEE Transactions on Vehicular Technology(TVT),IEEE Journal on Selected Areas in Communications(JSAC), IEEE Transactions on Communications(ToC), IEEE Transactions on Sustainable Energy(TSE)
+3.	Article on Role of emerging technologies to tackle COVID 19 was featured by IEEE Access and was on the home page of the journal as featured article for 6 months. The article received 350 citations in just 6 months. 
+4.	Acted as Technical program chair for SPIN-2021 conference for Blockchain track.
+5.	More than 1000 google scholar citations
+
+Project Grants/ Funding (Approved)
+1.	Nvidia GPU seed grant, “Advanced blockchain algorithms for IoT”, Amount: Rs 1.5 Lakhs (Role: Principal Investigator), 2018-2019
+2.	Start up seed funding worth Rs. 7 Lakh from Pilani innovation and Entrepreneurship Development Society (PIEDS) for startup named Medsupervision Pvt. Ltd.  
+Skills: 
+Python, R, Java, C/C++, Node Js, React JS, Ethereum, Hyper ledger Fabric, Solidity, LaTex, MATLAB
+
+Publications summary: 
+
+No. of SCI journals: 26, 
+No. of papers in IEEE Journals/ Magazines (total): 16, 
+No. of papers in IEEE Magazines (e.g. IEEE Communications mag., IEEE Network): 4, 
+No. of papers in IEEE Transactions (e.g. TVT,TNSE,IoT Journal): 8,
+No. of papers in IEEE Communications survey and tutorial (Impact factor 22): 1
+No. of citations in google scholar: 1067
+
+
+International Collaborations:
+
+1.	Prof. Mohsein Guizani , Qatar University, Doha, IEEE fellow
+2.	Prof. Biplab Sikdar, National University Singapore, Singapore
+3.	Prof. Nirwan Ansari, New Jersey Institute of Information technology, USA, IEEE fellow.
+4.	Prof. Joel J.P.C. Rodrigues, University of Beira, Portugal, IEEE fellow.
+5.	Prof. Sherali Zeadally, University of Kentucky, USA
+6.	Prof. F. Richard. Yu, Carleton University, Canada, IEEE fellow
+7.	Prof. Guangjie Han, Dalian University of Technology, China
+
+Publications

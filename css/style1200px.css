@@ -1,0 +1,29 @@
+
+
+
+@media screen and (max-width:1200px) {
+    .sidenavbar{
+        padding-left: 4rem;
+    }
+    #searchbox{
+        width: 16rem;
+    }
+    .profile-inner-section{
+        /* border: 1px solid red; */
+        height: 16rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .adressive-block{
+        padding: 0;
+        margin: 0;
+        padding-left: 2rem;
+        padding-top: 2rem;
+    
+    }
+    .start-banner{
+        padding-left: 2rem;
+    }
+
+}
+

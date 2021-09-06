@@ -1,0 +1,270 @@
+@media screen and (max-width:576px){
+    
+    .sidenavbar{
+        height:53rem;
+        width: 29.5%;
+        background-color: #e6e6e6;
+        border-right: 1px solid #c7c7c7;
+        float: left;
+    
+        padding-left: 1rem;
+        padding-top: 3rem;
+    }
+
+.top-col-right{
+    padding-left: 0rem;
+    /* border:1px solid red; */
+
+}
+.top-options-div{
+    height: auto;
+    padding-left: 0rem;
+    padding-top: 0;
+}
+.opt{
+    font-size: 0.8rem;
+    /* display: inline-block; */
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-right:1px solid rgb(206, 206, 206) ;
+    cursor: pointer;
+}
+.search-div{
+    padding-top: 1rem;
+    padding-left: 0rem;
+}
+#searchbox{
+    width:60vw;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 2px;
+    font-size: 1rem;
+    padding-left: 0.4rem;
+    margin-right:1vw;
+}
+.searchbtn{
+    padding-left: 6vw;
+    padding-right:6vw;
+    border: 1px solid rgb(207, 207, 207);
+    font-size: 1rem;
+    border-radius: 2px;
+}
+.updation-info-div{
+    height: auto;
+    padding-top:0.6rem;
+    padding-left:0rem;
+    padding-bottom: 1rem;
+
+}
+.updation-info{
+    font-size: 3vw;
+    color:rgb(84, 0, 194);
+}
+.colors-div{
+    border:0px solid red;
+    height:auto;
+    padding-left:9rem;
+    display: flex;
+    
+}
+.color{
+    display:inline;
+    justify-content: right;
+    height: 0.4rem;
+    width: 12rem;
+}
+.color-yellow{
+    background-color: #faca2c;
+}
+.color-blue{
+    background-color: #6cbfe7;
+}
+.color-red{
+    background-color: #ed1c24;
+}
+.area-line{
+    height: 2.2rem;
+    background:linear-gradient(#fdfdfd,#efeeee);
+    border-bottom: 4px solid #211d70;
+    /* border-color: #ed1c24; */
+}
+.location-div{
+    height: auto;
+    border-bottom:1px solid #b3b3b3;
+    padding-left: 2vw;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.font-location{
+    font-size:0.9rem;
+    color:#3f3b83;
+    font-weight: 600;
+    margin-left: 0rem;
+}
+}
+
+
+
+@media screen and (max-width:470px) {
+    .profile-div-main{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        /* background-color: #f2f2f2; */
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/jiit-building.jpg);
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-size: cover;
+        border: 0px solid rgb(126, 126, 126);
+        height: auto;
+    }
+    
+    .for-image-section{
+        /* border: 1px solid red; */
+        height: auto;
+        padding-top: 2rem;
+        border-right: 2px solid #fff;
+    }
+    .profile-inner-section{
+        padding-bottom: 0;
+        height: auto;
+        justify-content: center;
+    }
+    .for-detail-section{
+        /* border: 1px solid red; */
+        height: auto;
+        /* padding: 0; */
+        padding-top: 2rem;
+        padding-left: 1rem;
+        text-align: left;
+    
+    }
+    .image-container{
+        /* margin: 0; */
+        border: 1px solid red;
+        width: fit-content;
+        margin:0 auto;
+        padding:0.3rem;
+        border:4px solid rgb(74, 107, 255);
+        border-top:4px solid #ed1c24 ;
+        border-left: 4px solid rgb(255, 238, 7);
+        border-radius: 0rem 0rem 3.2rem 0rem;
+        border-color: aliceblue;
+    }
+    .profile-photo{
+        max-width:7rem;
+        height: 7rem;
+        border-radius: 0rem 0rem 3rem 0rem;
+        border: 1px solid #cecece;
+    }
+    .profilename{
+        font-size:1.5rem;
+        text-align: left;
+        color:#fff;
+        font-weight: 700;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .profilepost{
+        font-size: 0.9rem;
+        color:#fff;
+        font-weight: 600;
+        text-shadow: 1px 1px 3px #000;
+    }
+    .start-banner{
+        height:auto;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 3rem;
+        background-color: #211d70;
+        /* background-color:#ca9b00; */
+        /* background-color:#ed1c24; */
+    }
+    .word-start{
+        color:#fff;
+        font-size: 2rem;
+    }
+    
+}
+
+@media screen and (max-width:400px){
+    .profile-div-main{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        /* background-color: #f2f2f2; */
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/jiit-building.jpg);
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-size: cover;
+        border: 0px solid rgb(126, 126, 126);
+        height: auto;
+    }
+    
+    .for-image-section{
+        /* border: 1px solid red; */
+        height: auto;
+        padding-top: 2rem;
+        border-right: 2px solid #fff;
+    }
+    .profile-inner-section{
+        padding-bottom: 0;
+        height: auto;
+        justify-content: center;
+    }
+    .for-detail-section{
+        /* border: 1px solid red; */
+        height: auto;
+        /* padding: 0; */
+        padding-top: 2rem;
+        padding-left: 1rem;
+        text-align: left;
+    
+    }
+    .image-container{
+        /* margin: 0; */
+        border: 1px solid red;
+        width: fit-content;
+        margin:0 auto;
+        padding:0.3rem;
+        border:4px solid rgb(74, 107, 255);
+        border-top:4px solid #ed1c24 ;
+        border-left: 4px solid rgb(255, 238, 7);
+        border-radius: 0rem 0rem 3.2rem 0rem;
+        border-color: aliceblue;
+    }
+    .profile-photo{
+        max-width:7rem;
+        height: 7rem;
+        border-radius: 0rem 0rem 3rem 0rem;
+        border: 1px solid #cecece;
+    }
+    .profilename{
+        font-size:1.3rem;
+        text-align: left;
+        color:#fff;
+        font-weight: 700;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .profilepost{
+        font-size: 0.7rem;
+        color:#fff;
+        font-weight: 600;
+        text-shadow: 1px 1px 3px #000;
+    }
+    .start-banner{
+        height:auto;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 1rem;
+        background-color: #211d70;
+        /* background-color:#ca9b00; */
+        /* background-color:#ed1c24; */
+    }
+    .word-start{
+        color:#fff;
+        font-size: 1.5rem;
+    }
+    
+
+}

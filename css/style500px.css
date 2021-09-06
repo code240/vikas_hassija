@@ -1,0 +1,149 @@
+@media screen and (max-width:500px){
+    .sidenavbar{
+        display:none;
+    }
+    .sidesection{
+        height: fit-content;
+        border: 0px solid red;
+        width: 100%;
+    }
+    
+    
+
+    .start-banner{
+        height:auto;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        background-color: #211d70;
+        justify-content: space-between;
+        /* background-color:#ca9b00; */
+        /* background-color:#ed1c24; */
+    }
+    
+    .word-start{
+        color:#fff;
+        display: flexbox;
+<<<<<<< HEAD
+        font-size: 1.2rem;
+=======
+        font-size: 1.65rem;
+>>>>>>> 426284acb5f108ef3550cce648265e82645ff868
+    }
+    .menu-bars-line{
+        display:inline-block;
+        display: flexbox;
+<<<<<<< HEAD
+        font-size: 1.2rem;
+=======
+        font-size: 1.65rem;
+>>>>>>> 426284acb5f108ef3550cce648265e82645ff868
+        color:#fff;
+        text-align: right;
+        
+    }
+    .mobi-option-div{
+        display: none;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-color: #211d70;
+    }
+    
+    .mobi-opt{
+        display: block;
+        color:#fff;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        text-align: center;
+        font-size: 1.3rem;
+        border-bottom: 1px solid #979797;
+    }
+    .mobi-opt:hover{
+        background-color: #fff;
+        color:#211d70;
+    }
+    .active{
+        background-color: #fff;
+        color:#211d70;
+        font-weight: 700;
+    }
+    #hidemenu{
+        display: none;
+    }
+    #showmenu{
+        display: inline-block;
+    }
+
+
+
+
+
+
+    /* footer design */
+    
+
+    .getintouch{
+        width: fit-content;
+        color:#fff;
+        padding: 0.3rem;
+        padding-left: 1.5rem;
+        padding-right:1.5rem ;
+        border-radius: 0px 20px 20px 0px;
+        text-align: center;
+        background-color: #3a31e7;
+        display: inline-block;
+    }
+    .getintouch span{
+        font-size: 1.1rem;
+    }
+    .links-block-1{
+        padding-top: 0rem;
+        /* border: 1px solid red; */
+        padding-left: 2rem;
+    }
+    .quick-heading{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+        display: block;
+    }
+    .quick-item{
+        display: inline-block;
+        padding-left: 0.6rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        color:#0047b3;
+        color:#555;
+        cursor: pointer;
+    }
+    .quick-1{
+        padding-top: 0.4rem;
+    }
+    .quick-item:hover{
+        text-decoration: underline;
+    }
+    .bolts{
+        color:#0066ff;
+        font-weight: 900;
+        line-height: 1.5rem;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+    }
+    .last{
+    height: auto;
+    background-color: rgb(196, 196, 196);
+    font-size: 0.8rem;
+    padding-top: 01rem;
+    padding-bottom: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    }
+
+
+
+
+    
+}

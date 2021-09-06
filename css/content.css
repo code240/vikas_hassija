@@ -1,0 +1,70 @@
+.sidesection{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+}
+.main_name{
+    font-size: 1.7rem;
+    color: rgb(62, 42, 196);
+    font-family: verdana;
+}
+.info{
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    line-height: 1.6rem;
+}
+.web-info{
+    color:#0059ff;
+}
+.dob-info{
+    font-size: 1rem;
+}
+.info-subheading{
+    font-size: 1.7rem;
+    color: rgb(62, 42, 196);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+.education-info{
+    font-size: 1rem;
+    margin-left: 1rem;
+
+}
+.experience-info{
+    font-size: 1rem;
+    margin-left: 1rem;
+
+}
+.time-period{
+    color:rgb(255, 0, 0);font-weight:500;font-style:italic;
+    padding-left: 1.5rem;
+}
+.coursename{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+.taught-heading{
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+.project-text{
+    font-size: 1.1rem;
+    width: 50rem;
+}
+.collabration-text{
+    line-height: 2.2rem;
+}
+.impact-factor{
+    color:red;
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+
+
+

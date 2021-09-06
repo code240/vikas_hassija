@@ -26,20 +26,14 @@
     .word-start{
         color:#fff;
         display: flexbox;
-<<<<<<< HEAD
         font-size: 1.2rem;
-=======
         font-size: 1.65rem;
->>>>>>> 426284acb5f108ef3550cce648265e82645ff868
     }
     .menu-bars-line{
         display:inline-block;
         display: flexbox;
-<<<<<<< HEAD
         font-size: 1.2rem;
-=======
         font-size: 1.65rem;
->>>>>>> 426284acb5f108ef3550cce648265e82645ff868
         color:#fff;
         text-align: right;
         
@@ -142,7 +136,7 @@
     text-align: center;
     }
 
-
+  
 
 
     

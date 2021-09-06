@@ -27,13 +27,13 @@
         color:#fff;
         display: flexbox;
         font-size: 1.2rem;
-        font-size: 1.65rem;
+        font-size: 1.6rem;
     }
     .menu-bars-line{
         display:inline-block;
         display: flexbox;
         font-size: 1.2rem;
-        font-size: 1.65rem;
+        font-size: 1.6rem;
         color:#fff;
         text-align: right;
         
@@ -58,6 +58,9 @@
     .mobi-opt:hover{
         background-color: #fff;
         color:#211d70;
+    }
+    .mobi-opt-1{
+        border-top: 1px solid #979797;
     }
     .active{
         background-color: #fff;

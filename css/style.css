@@ -60,17 +60,34 @@
     cursor: pointer;
 }
 .search-div{
-    padding-top: 1.5rem;
+    padding:0;
     padding-left: 2rem;
+    border: 0px solid red;
+    text-align: center;
 }
 #searchbox{
-    width: 20rem;
-    border: 1px solid rgb(175, 175, 175);
+    width: 24rem;
+    border: 0px solid rgb(175, 175, 175);
     border-radius: 2px;
     font-size: 1.1rem;
     padding-left: 0.4rem;
     margin-right: 1rem;
 }
+.gcse-search{
+    padding: 0;
+}
+
+.gsc-control-wrapper-cse{
+    padding: 0;
+    /* border: 1px solid red; */
+}
+/* .gsc-input{}     */
+/* .gsc-input-box{} */
+
+.gsc-search-button{
+    height: 2rem;
+} 
+/* .gsc-search-button-v2{} */
 .searchbtn{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -80,7 +97,7 @@
 }
 .updation-info-div{
     height: auto;
-    padding-top:0.6rem;
+    padding-top:0rem;
     padding-left:6rem;
     padding-bottom: 1rem;
 

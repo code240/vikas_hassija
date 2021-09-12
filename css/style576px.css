@@ -34,13 +34,31 @@
     padding-left: 0rem;
 }
 #searchbox{
-    width:60vw;
-    border: 1px solid rgb(175, 175, 175);
+    width:100%;
+    border: 0px solid rgb(175, 175, 175);
     border-radius: 2px;
     font-size: 1rem;
     padding-left: 0.4rem;
+    
     margin-right:1vw;
 }
+
+.gcse-search{
+    padding: 0;
+}
+
+.gsc-control-wrapper-cse{
+    padding: 0;
+    /* border: 1px solid red; */
+}
+/* .gsc-input{}     */
+/* .gsc-input-box{} */
+
+.gsc-search-button{
+    height: 2.8rem;
+} 
+/* .gsc-search-button-v2{} */
+
 .searchbtn{
     padding-left: 6vw;
     padding-right:6vw;

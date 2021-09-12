@@ -60,10 +60,8 @@
     cursor: pointer;
 }
 .search-div{
-    padding:0;
+    padding-top: 1.5rem;
     padding-left: 2rem;
-    border: 0px solid red;
-    text-align: center;
 }
 #searchbox{
     width: 24rem;
@@ -97,7 +95,7 @@
 }
 .updation-info-div{
     height: auto;
-    padding-top:0rem;
+    padding-top:0.6rem;
     padding-left:6rem;
     padding-bottom: 1rem;
 

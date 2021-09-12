@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 .search-div{
-    padding-top: 1rem;
+    padding-top: 0rem;
     padding-left: 0rem;
 }
 #searchbox{
@@ -39,8 +39,8 @@
     border-radius: 2px;
     font-size: 1rem;
     padding-left: 0.4rem;
-    
     margin-right:1vw;
+    /* padding-bottom: 0; */
 }
 
 .gcse-search{
@@ -62,13 +62,13 @@
 .searchbtn{
     padding-left: 6vw;
     padding-right:6vw;
-    border: 1px solid rgb(207, 207, 207);
+    border: 0px solid rgb(207, 207, 207);
     font-size: 1rem;
     border-radius: 2px;
 }
 .updation-info-div{
     height: auto;
-    padding-top:0.6rem;
+    padding-top:0;
     padding-left:0rem;
     padding-bottom: 1rem;
 

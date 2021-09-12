@@ -1,12 +1,16 @@
 function menubar(){
-    currentSituation = `Profile &nbsp<i class="fas fa-caret-down"></i>`;
+    var SituationTeller = document.getElementById("arrowicon");
+    SituationTeller.classList.remove("fa-caret-right");
+    SituationTeller.classList.add("fa-caret-down");
     document.getElementById("currentheading").innerHTML = currentSituation;
     document.getElementById("mobi-menubar").style.display = "block";
     document.getElementById("showmenu").style.display = "none";
     document.getElementById("hidemenu").style.display = "block";
 }
 function hide_menubar(){
-    currentSituation = `Profile &nbsp<i class="fas fa-caret-right"></i>`;
+    var SituationTeller = document.getElementById("arrowicon");
+    SituationTeller.classList.add("fa-caret-right");
+    SituationTeller.classList.remove("fa-caret-down");
     document.getElementById("currentheading").innerHTML = currentSituation;
     document.getElementById("mobi-menubar").style.display = "none";
     document.getElementById("showmenu").style.display = "block";

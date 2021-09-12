@@ -6,7 +6,8 @@
         padding-left: 4rem;
     }
     #searchbox{
-        width: 16rem;
+        width:50vw;
+        border: 0;
     }
     .profile-inner-section{
         /* border: 1px solid red; */

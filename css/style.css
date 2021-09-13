@@ -36,8 +36,9 @@
     padding-left: 1rem;
 }
 .logo-img{
-    width: 7rem;
+    max-width: 7rem;
     height: 7rem;
+    cursor: pointer;
 }
 .logo-img-text{
     width: 30rem;
@@ -315,6 +316,7 @@
 .bottom-logo{
     max-width: 5rem;
     height: 5rem;
+    cursor: pointer;
 }
 .for-bottom-textimage{
     padding: 0;

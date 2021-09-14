@@ -100,8 +100,11 @@ h1{
 h1{
     font-size: 1.7rem;
     text-align: center;
-    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    margin-top: 0;
     padding-bottom: 0.4rem;
+    background-color: #0D6EFD;
+    color:#fff;
     border-bottom: 1px solid #0D6EFD;
     width: 100%;
 }

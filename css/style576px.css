@@ -128,7 +128,6 @@
         text-align: center;
         justify-content: center;
         /* background-color: #f2f2f2; */
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/jiit-building.jpg);
         padding-top: 4rem;
         padding-bottom: 4rem;
         background-size: cover;
@@ -181,6 +180,13 @@
         font-weight: 700;
         text-shadow: 2px 2px 3px #000;
     }
+    .acm{
+        font-size:1.2rem;
+        text-align: left;
+        color:#fff;
+        font-weight: 700;
+        text-shadow: 2px 2px 3px #000;
+    }
     .profilepost{
         font-size: 0.9rem;
         color:#fff;
@@ -210,7 +216,6 @@
         text-align: center;
         justify-content: center;
         /* background-color: #f2f2f2; */
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/jiit-building.jpg);
         padding-top: 4rem;
         padding-bottom: 4rem;
         background-size: cover;
@@ -258,6 +263,13 @@
     }
     .profilename{
         font-size:1.3rem;
+        text-align: left;
+        color:#fff;
+        font-weight: 700;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .acm{
+        font-size:1.1rem;
         text-align: left;
         color:#fff;
         font-weight: 700;

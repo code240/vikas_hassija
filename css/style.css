@@ -148,8 +148,7 @@
     padding: 0;
     text-align: center;
     justify-content: center;
-    /* background-color: #f2f2f2; */
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/jiit-building.jpg);
+    background-color: #858585;
     padding-top: 2rem;
     padding-bottom: 2rem;
     background-size: cover;
@@ -198,6 +197,13 @@
 }
 .profilename{
     font-size:2.7rem;
+    text-align: left;
+    color:#fff;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px #000;
+}
+.acm{
+    font-size: 2rem;
     text-align: left;
     color:#fff;
     font-weight: 700;

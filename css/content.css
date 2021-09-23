@@ -29,11 +29,13 @@
 .education-info{
     font-size: 1rem;
     margin-left: 1rem;
-
 }
 .experience-info{
     font-size: 1rem;
     margin-left: 1rem;
+}
+.width{
+    width:80%;
 }
 .time-period{
     color:rgb(255, 115, 0);
@@ -61,7 +63,7 @@
 }
 .impact-factor{
     color:red;
-    color:rgb(255, 102, 0);
+    color:#ff6600;
     font-weight: 500;
     font-style: italic;
 }

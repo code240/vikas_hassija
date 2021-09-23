@@ -168,12 +168,203 @@ h2{
     display: none;
 }
 
+.background-division{
+    border: 10px solid rgb(150, 150, 150);
+    width: 100%;
+    border-style: ridge;
+    margin: 0 auto;
+    margin-top: 3rem;
+    height: auto;
+    padding: 0.5rem;
+    text-align: left;
+    background-color: rgb(217, 223, 255);
+}
+.background-img{
+    background-size: cover;
+    width: 100%;
+    height:13.5rem;
+}
+.edit-btn-background{
+    margin-top: 0.6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+/* .pencil-div{
+    position:absolute;
+    top:-1.5rem;
+    right:-1.5rem;
+    height: 3.1rem;
+    color:#fff;
+    padding-top:0.7rem;
+    padding-left: 0.22rem;
+    width: 3.1rem;
+    cursor: pointer;
+    background-color: #da2100;
+    border-radius: 2rem;
+    transition: 0.5s ease;
+} */
+/* .pencil-div:hover{
+    background-color: #fff;
+    color:#da2100;
+    border:1px solid #555; 
+} */
+.other-table-div{
+    margin-top: 3rem;
+    border: 0px solid #000;
+    padding-top: 0.5rem;
+}
+
+.fav-logo-img{
+    max-width: 2rem;
+    max-height:2rem;
+    margin: 1rem;
+}
+.logo-img{
+    max-width: 5rem;
+    max-height:5rem;
+    margin: 1rem;
+}
+.side-logo-img{
+    max-width: 20rem;
+    max-height:15rem;
+    margin: 1rem;
+}
+
+.you-img{
+    max-width: 10rem;
+    max-height:10rem;
+    margin: 1rem;
+}
 
 
 
+.black-fix{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7));
+}
+.upload-div{
+    width: 50%;
+    height:50%;
+    position: fixed;
+    left:25%;
+    top:20%;
+    background-color: #f1f1f1;
+    /* background-color: #5256AD; */
+    box-shadow:5px 5px 20px #333;
+    border-radius: 5px;
+}
+.dotted-div{
+    height: 70%;
+    margin-top: 7%;
+    border: 3px solid #555;
+    width: 60%;
+    margin-left: 20%;
+    border-style: dotted;
+}
+.cloud-div{
+    height: auto;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 0px solid #0D6EFD;
+}
+.cloud-img{
+    width:100%;
+}
+.input-file{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #555;
+    font-size:0.8rem;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+    width: 60%;
+    margin-bottom: 2rem;
+
+}
+.btn-upload{
+    color:#fff;
+    background-color: #3D4EAF;
+    display: block;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+    transition: 0.4s ease;
+}
+.btn-upload:hover{
+    background-color: #596ddb;
+    color: #fff;
+}
+.cut-sign{
+    position: absolute;
+    background-color: red;
+    color:white;
+    /* padding: 1rem; */
+    display: block;
+    /* padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem; */
+    height: 2rem;
+    text-align: center;
+    padding-top: 1px;
+
+    width: 2rem;
+    top:-1rem;
+    font-size: 1.2rem;
+    right:-1rem;
+    border-radius: 2rem;
+    transition: 0.4s ease;
+}
+.cut-sign:hover{
+    background-color: #fff;
+    color:red;
+    border: 1px solid #333;
+    padding-top: 0;
+    cursor: pointer;
+}
+.ps-div{
+    height: auto;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    top:10%;
+}
+.dotted-for-ps{
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 1rem;
+}
+.input-ps{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.input-1{
+    margin-top: 2rem;
+}
+.btn-change{
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
 
 
-
+#urlchange{
+    display: none;
+}
+#password{
+    display:none;
+}
+#upload{
+    display: none;
+}
 @media screen and (max-width:450px) {
     body{
         padding-bottom: 10rem;

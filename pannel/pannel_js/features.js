@@ -36,6 +36,24 @@ function change_url_department(){
     document.getElementById("what_url").value = "department_home";
 }
 
+function change_url_about(){
+    document.getElementById("urlchange").style.display = "block";
+    document.getElementById("what_url").value = "about_url";
+}
+function change_url_governance(){
+    document.getElementById("urlchange").style.display = "block";
+    document.getElementById("what_url").value = "governance_url";
+}
+function change_url_teaching(){
+    document.getElementById("urlchange").style.display = "block";
+    document.getElementById("what_url").value = "teaching_methodology_url";
+}
+function change_url_contact(){
+    document.getElementById("urlchange").style.display = "block";
+    document.getElementById("what_url").value = "contact_url";
+}
+
+
 function dismiss_urlchange(){
     document.getElementById("urlchange").style.display = "none";
 }

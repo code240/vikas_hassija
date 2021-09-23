@@ -139,7 +139,7 @@
 
 
 <?php
-  $q2 = "SELECT * FROM conference";
+  $q2 = "SELECT * FROM conference"; 
   $data = mysqli_query($con,$q2);
   $num_conference = mysqli_num_rows($data);
   if($num_conference!=0){
@@ -189,6 +189,24 @@
 
 
 ?>
+<?php
+$q3 = "SELECT * FROM base";
+$data = mysqli_query($con,$q3);
+while($result = mysqli_fetch_assoc($data)){
+  $department = $result["department_home"];
+  $university = $result["university_home"];
+  $favicon = $result["favicon"];
+  $logo = $result["logo"];
+  $sidelogo = $result["sidelogo"];
+  $you = $result["you"];
+  $background = $result["background"];
+  $about_url = $result["about_url"];
+  $contact_url = $result["contact_url"];
+  $governance_url = $result["governance_url"];
+  $teaching_method_url = $result["teaching_methodology_url"];
+  // $password = $result["password"];
+}
+?>
 
 
 
@@ -199,12 +217,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="pannel_js/navbar_controller.js"></script>
-
+    <script src="pannel_js/form-validation.js"></script>
     <script src="pannel_js/webninja.js"></script>
     <link rel="stylesheet" href="css/webninja.css">
+    <script src="pannel_js/features.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/access.css">
+    <style>.background-img{background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../media/<?php echo $background; ?>');}</style>
     <title>Admin Pannel</title>
 </head>
 <body>
@@ -249,8 +269,8 @@
           </table>
           <div class="container-fluid my-groups">
             <span class="new-data-span">ADD NEW DATA : </span>
-            <form action="backend/add.php" method="POST">
-              <textarea class="input-text" placeholder="Type here..." name="data"></textarea>
+            <form action="backend/add.php"   onsubmit="return valid_form_1();" name="form1" method="POST">
+              <textarea class="input-text" minlength="5" placeholder="Type here..." name="data"></textarea>
               <input type="hidden" name="table" value="experience">
               <input type="submit" class="btn btn-primary add" value="ADD">
             </form>
@@ -284,7 +304,7 @@
           </table>
           <div class="container-fluid my-groups">
             <span class="new-data-span">ADD NEW DATA : </span>
-            <form action="backend/add.php" method="POST">
+            <form  action="backend/add.php"  onsubmit="return valid_form_2();" name="form2"  method="POST">
               <textarea class="input-text" placeholder="Type here..." name="data"></textarea>
               <input type="hidden" name="table" value="courses">
               <input type="submit" class="btn btn-primary add" value="ADD">
@@ -318,7 +338,7 @@
           </table>
           <div class="container-fluid my-groups">
             <span class="new-data-span">ADD NEW DATA : </span>
-            <form action="backend/add.php" method="POST">
+            <form  action="backend/add.php" onsubmit="return valid_form_3();" name="form3" method="POST">
               <textarea class="input-text" placeholder="Type here..." name="data"></textarea>
               <input type="hidden" name="table" value="project">
               <input type="submit" class="btn btn-primary add" value="ADD">
@@ -353,7 +373,7 @@
           </table>
           <div class="container-fluid my-groups">
             <span class="new-data-span">ADD NEW DATA : </span>
-            <form action="backend/add.php" method="POST">
+            <form action="backend/add.php" onsubmit="return valid_form_4();" name="form4" method="POST">
               <textarea class="input-text" placeholder="Type here..." name="data"></textarea>
               <input type="hidden" name="table" value="awards">
               <input type="submit" class="btn btn-primary add" value="ADD">
@@ -388,7 +408,7 @@
           </table>
           <div class="container-fluid my-groups">
             <span class="new-data-span">ADD NEW DATA : </span>
-            <form action="backend/add.php" method="POST">
+            <form action="backend/add.php" onsubmit="return valid_form_5();" name="form5" method="POST">
               <textarea class="input-text" placeholder="Type here..." name="data"></textarea>
               <input type="hidden" name="table" value="collabration">
               <input type="submit" class="btn btn-primary add" value="ADD">
@@ -425,7 +445,7 @@
           </table>
           <div class="container-fluid my-groups">
             <span class="new-data-span">ADD NEW DATA : </span>
-            <form action="backend/add.php" method="POST">
+            <form action="backend/add.php" onsubmit="return valid_form_6();" name="form6" method="POST">
               <textarea class="input-text" placeholder="Type here..." name="data"></textarea>
               <input type="hidden" name="table" value="conference">
               <input type="submit" class="btn btn-primary add" value="ADD">
@@ -460,7 +480,7 @@
           </table>
           <div class="container-fluid my-groups">
             <span class="new-data-span">ADD NEW DATA : </span>
-            <form action="backend/add.php" method="POST">
+            <form action="backend/add.php" onsubmit="return valid_form_7();" name="form7" method="POST">
               <textarea class="input-text" placeholder="Type here..." name="data"></textarea>
               <input type="hidden" name="table" value="publication">
               <input type="submit" class="btn btn-primary add" value="ADD">
@@ -470,12 +490,176 @@
 
         <div class="container-fluid table-div" id="other">
             <!-- FOR PROFILE SETTING -->
-            
+            <div class="countainer-fluid background-division">
+              <div class="background-img"></div>
+              <button class="btn btn-success edit-btn-background" onclick="upload_background_image();">Edit</button>
+            </div>
+                
+            <div class="container-fluid other-table-div">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>University Home</td>
+                    <td><?php echo $university; ?></td>
+                    <td><button class="btn btn-success btn-edit" onclick="change_url_university();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Department Home</td>
+                    <td><?php echo $department; ?></td>
+                    <td><button class="btn btn-success btn-edit" onclick="change_url_department();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>About University Url</td>
+                    <td><?php echo $about_url; ?></td>
+                    <td><button class="btn btn-success btn-edit" onclick="change_url_about();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Governance url</td>
+                    <td><?php echo $governance_url; ?></td>
+                    <td><button class="btn btn-success btn-edit" onclick="change_url_governance();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Teaching Methodology</td>
+                    <td><?php echo $teaching_method_url; ?></td>
+                    <td><button class="btn btn-success btn-edit" onclick="change_url_teaching();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Contact Page url</td>
+                    <td><?php echo $contact_url; ?></td>
+                    <td><button class="btn btn-success btn-edit" onclick="change_url_contact();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>favicon</td>
+                    <td><img src="../media/<?php echo $favicon; ?>" alt="vikas hassija" class="fav-logo-img"></td>
+                    <td><button class="btn btn-success btn-edit" onclick="favicon_upload();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>logo</td>
+                    <td><img src="../media/<?php echo $logo; ?>" alt="vikas hassija" class="logo-img"></td>
+                    <td><button class="btn btn-success btn-edit" onclick="logo_upload();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Side logo</td>
+                    <td><img src="../media/<?php echo $sidelogo; ?>" alt="vikas hassija" class="side-logo-img"></td>
+                    <td><button class="btn btn-success btn-edit" onclick="sidelogo_upload();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>You</td>
+                    <td><img src="../media/<?php echo $you; ?>" alt="vikas hassija" class="you-img"></td>
+                    <td><button class="btn btn-success btn-edit" onclick="you_upload();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>Password</td>
+                    <td>**********</td>
+                    <td><button class="btn btn-success btn-edit" onclick="change_password();">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>Information</td>
+                    <td>
+                      &lt;b&gt;<b>FOR BOLD</b>&lt;/b&gt; <br>
+                      &lt;d&gt;<b  style="color:#ff6600;">Dec 2015 – July 2018(date)</b>&lt;/d&gt; <br>
+                      &lt;o&gt;<span style="color:#ff6600;font-weight:bold">impact factor</span>&lt;/o&gt; <br>
+                      <!-- &lt;b&gt;<b>FOR BOLD</b>&lt;/b&gt; <br> -->
+                      <!-- &lt;b&gt;<b>FOR BOLD</b>&lt;/b&gt; <br> -->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
         </div>
 
 
     </section>
     <div class="clear"></div>
+
+
+
+    <div class="black-fix" id="upload">
+        <div class="upload-div">
+        <span class="cut-sign" onclick="dismiss_upload();"><i class="far fa-times-circle"></i></span>
+        <div class="dotted-div">
+                <form action="backend/base-controller.php" name="form_img" onsubmit="return img_valid();" method="POST" enctype="multipart/form-data">
+                  <div class="cloud-div"><img src="media/cloud.png" alt="cloud" class="cloud-img"></div>
+                  <input type="file" name="image" accept="image/*" id="img" autocomplete="off" class="input-file">
+                  <input type="hidden" name="what" id="what">
+                  <input type="submit" value="Upload" class="btn btn-upload">
+                </form>
+          </div>
+        </div>
+    </div>
+
+    
+    <div class="black-fix" id="urlchange">
+        <div class="upload-div">
+        <span class="cut-sign" onclick="dismiss_urlchange();"><i class="far fa-times-circle"></i></span>
+        <div class="dotted-div">
+                <form action="backend/base-controller.php" name="form_url" onsubmit="return url_valid();" method="POST">
+                  <div class="cloud-div"><img src="media/www.png" alt="cloud" class="cloud-img"></div>
+                  <input type="text" autocomplete="off" placeholder="Enter the url" style="padding-left:0.6rem;" name="url" id="img" class="input-file">
+                  <input type="hidden"  name="what" id="what_url">
+                  <input type="submit" value="Update" class="btn btn-upload">
+                </form>
+          </div>
+        </div>
+    </div>
+
+
+      
+    <div class="black-fix" id="password">
+        <div class="upload-div ps-div">
+        <span class="cut-sign" onclick="dismiss_password();"><i class="far fa-times-circle"></i></span>
+        <div class="dotted-div dotted-for-ps">
+                <form action="backend/base-controller.php" name="form_ps" onsubmit="return password_valid();" method="POST">
+                  <div class="cloud-div"><img src="media/shield.png" alt="cloud" class="cloud-img"></div>
+                  <input type="password" placeholder="Old password" style="padding-left:0.6rem;" name="old" id="img" class="input-file input-ps input-1">
+                  <input type="password" placeholder="New Password" style="padding-left:0.6rem;" name="new" id="img" class="input-file input-ps">
+                  <input type="password" placeholder="Confirm Password" style="padding-left:0.6rem;" name="confirm" id="img" class="input-file input-ps">
+                  <input type="hidden" name="what" id="what_ps">
+                  <input type="submit" value="Change password" class="btn btn-upload btn-change">
+                </form>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="black-fix" id="urlchange">
+        <div class="upload-div">
+        <span class="cut-sign" onclick="dismiss_urlchange();"><i class="far fa-times-circle"></i></span>
+        <div class="dotted-div">
+                <form action="backend/base-controller.php" method="POST">
+                  <div class="cloud-div"><img src="media/www.png" alt="cloud" class="cloud-img"></div>
+                  <input type="text" placeholder="Enter the url" style="padding-left:0.6rem;" name="url" id="img" class="input-file">
+                  <input type="hidden" name="what" id="what_url">
+                  <input type="submit" value="Update" class="btn btn-upload">
+                </form>
+          </div>
+        </div>
+    </div> -->
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

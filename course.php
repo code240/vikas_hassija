@@ -1,3 +1,22 @@
+<?php
+include "pannel/database.php";
+include "code/ui.php";
+include "code/date-controller.php";
+$con = mysqli_connect($a,$b,$c,$d);
+$query = "SELECT * FROM courses";
+$data = mysqli_query($con,$query);
+$row = mysqli_num_rows($data);
+$i=0;
+if($row!=0){
+    while($r = mysqli_fetch_assoc($data)){
+        $course[$i]  = '<i class="fas fa-hand-point-right" style="color:red;"></i> &nbsp;&nbsp;';
+        $course[$i] .= $r["course"];
+        $course[$i] .= ".<br>";
+        $i++;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +35,17 @@
    <link rel="stylesheet" href="css/style500px.css">
    <link rel="stylesheet" href="css/content.css">
    <link rel="stylesheet" href="css/content500px.css">
-   <link rel="shortcut icon" href="media/favlogo.png" type="image/x-icon">
-
-    <title>Project and Awards</title>
+   <link rel="shortcut icon" href="media/<?php echo $favicon; ?>" type="image/x-icon">
+    <title>Courses</title>
     <style>
         .sidenavbar{
-            height:59rem;
+            height:37rem;
         }
         .sidesection{
-            height: 59rem;
+            height: 37rem;
         }
+        .profile-div-main{ background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("media/<?php echo $background; ?>"); }
+
         @media  screen and (max-width:500px) {
             .sidesection{
                 height: fit-content;
@@ -40,18 +60,18 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 top-col top-col-1">
                 
                 <div class="top-logo-div">
-                    <img src="media/logo.png" onclick="window.location.assign('https://www.jiit.ac.in/');" alt="bits-pilani" class="logo-img">
+                    <img src="media/<?php echo $logo; ?>" onclick="window.location.assign('<?php echo $university_home; ?>');" alt="bits-pilani" class="logo-img">
                 </div>
                 <div class="top-logotext-div">
-                    <img src="media/logo-right.png" alt="bits-pilani" class="logo-img-text">
+                    <img src="media/<?php echo $sidelogo; ?>" alt="bits-pilani" class="logo-img-text">
                 </div>
 
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 top-col top-col-2 top-col-right">
                 <div class="top-options-div">
-                    <a href="https://www.jiit.ac.in/" target="_blank" style="text-decoration: none;color:inherit"><span class="opt">University Home</span></a>
+                    <a href="<?php echo $university_home ?>" target="_blank" style="text-decoration: none;color:inherit"><span class="opt">University Home</span></a>
                     <!-- <span class="opt">Campus Home</span> -->
-                    <a href="https://www.jiit.ac.in/computer-science-it" target="_blank" style="text-decoration: none;color:inherit"><span class="opt">Department Home</span></a>
+                    <a href="<?php $department_home; ?>" target="_blank" style="text-decoration: none;color:inherit"><span class="opt">Department Home</span></a>
                 </div>
                 <div class="search-div">
                     <!-- <input type="text" autocomplete="off" placeholder="Search..." name="search" > -->
@@ -60,7 +80,7 @@
                 </div>
                 <div class="updation-info-div">
                     <span class="updation-info">
-                        Page last updated on <b>Wednesday, September 01, 2021</b>
+                        Page last updated on <b><?php  echo $date; ?></b>
                     </span>
                 </div>
                 <div class="colors-div">
@@ -76,7 +96,7 @@
         <span class="font-location">You are here: 
         &nbsp;
         <i class="fas fa-home"></i> &nbsp; 
-        <a href="index.html" style="text-decoration: none; color:inherit">Home </a> &rsaquo; Projects & Awards &rsaquo;
+        <a href="index.php" style="text-decoration: none; color:inherit">Home </a> &rsaquo; Courses &rsaquo;
     </span> &nbsp;
     </div>
 
@@ -85,38 +105,38 @@
             <div class="col-sm-2 col-0"></div>
             <div class="col-sm-4 col-5 for-image-section">
                 <div class="image-container">
-                    <img src="media/vikas_hassija.jpg" alt="vikas hassija jiit" class="profile-photo">
+                    <img src="media/<?php echo $you; ?>" alt="vikas hassija jiit" class="profile-photo">
                 </div>
             </div>
             <div class="col-sm-6 col-6 for-detail-section">
-                <span class="profilename">Vikas Hassija</span><br><br>
+                <span class="profilename">Vikas Hassija,</span><br><span class="acm">ACM Member</span><br>
                 <span class="profilepost"><u><i>Assistant Professor, <br> Department of CSE and IT </i></u></span>
             </div>
         </div>
     </section>
 <div class="start-banner">
-    <span class="word-start" id="currentheading">Projects & Awards &nbsp<i class="fas fa-caret-right" id="arrowicon"></i></span>
+    <span class="word-start" id="currentheading">Courses &nbsp<i class="fas fa-caret-right" id="arrowicon"></i></span>
     <span class="menu-bars-line" onclick="menubar();" id="showmenu"><i class="fas fa-bars"></i></span>
     <span class="menu-bars-line" onclick="hide_menubar();" id="hidemenu"><i class="fas fa-bars"></i></span>
 
 </div>
 <div class="mobi-option-div" id="mobi-menubar">
-    <a href="index.html" style="text-decoration: none;"><span class="mobi-opt mobi-opt-1">Profile</span></a>
-    <a href="course.html" style="text-decoration: none;"><span class="mobi-opt mobi-opt-2">Courses</span></a>
-    <a href="projects.html" style="text-decoration: none;"><span class="mobi-opt mobi-opt-3 active">Projects & Awards</span></a>
-    <a href="collabration.html" style="text-decoration: none;"><span class="mobi-opt mobi-opt-4">Collabration</span></a>
-    <a href="conferences.html" style="text-decoration: none;"><span class="mobi-opt mobi-opt-5">Conferences</span></a>
-    <a href="publications.html" style="text-decoration: none;"><span class="mobi-opt mobi-opt-6">Publications</span></a>
+    <a href="index.php" style="text-decoration: none;"><span class="mobi-opt mobi-opt-1">Profile</span></a>
+    <a href="course.php" style="text-decoration: none;"><span class="mobi-opt mobi-opt-2 active">Courses</span></a>
+    <a href="projects.php" style="text-decoration: none;"><span class="mobi-opt mobi-opt-3">Projects & Awards</span></a>
+    <a href="collabration.php" style="text-decoration: none;"><span class="mobi-opt mobi-opt-4">Collabration</span></a>
+    <a href="conferences.php" style="text-decoration: none;"><span class="mobi-opt mobi-opt-5">Conferences</span></a>
+    <a href="publications.php" style="text-decoration: none;"><span class="mobi-opt mobi-opt-6">Publications</span></a>
 </div>
 
 
 <nav class="sidenavbar">
-    <a href="index.html" style="text-decoration:none;"><span class="navbar-options nav-1">Profile <b>&#8250;</b></span></a>
-    <a href="course.html" style="text-decoration:none;"><span class="navbar-options nav-2">Course <b>&#8250;</b></span></a>
-    <span class="navbar-options nav-3"><b>Projects / Awards &#8250;</b></span>
-    <a href="collabration.html" style="text-decoration:none;"><span class="navbar-options nav-4">Collabration <b>&#8250;</b></span></a>
-    <a href="conferences.html" style="text-decoration:none;"><span class="navbar-options nav-5">Conferences <b>&#8250;</b></span></a>
-    <a href="publications.html" style="text-decoration:none;"><span class="navbar-options nav-6">Publications <b>&#8250;</b></span></a>
+    <a href="index.php" style="text-decoration:none;"><span class="navbar-options nav-1">Profile <b>&#8250;</b></span></a>
+    <span class="navbar-options nav-2"><b>Course &#8250;</b></span>
+    <a href="projects.php" style="text-decoration:none;"><span class="navbar-options nav-3">Projects / Awards <b>&#8250;</b></span></a>
+    <a href="collabration.php" style="text-decoration:none;"><span class="navbar-options nav-4">Collabration <b>&#8250;</b></span></a>
+    <a href="conferences.php" style="text-decoration:none;"><span class="navbar-options nav-5">Conferences <b>&#8250;</b></span></a>
+    <a href="publications.php" style="text-decoration:none;"><span class="navbar-options nav-6">Publications <b>&#8250;</b></span></a>
 </nav>
 <!-- ####################### CONTENT SECTION ####################### -->
 <section class="sidesection">
@@ -141,27 +161,26 @@
     <span class="info dob-info">
        <b>Gender: </b>Male
     </span>
-
     <h2 class="info-subheading">
-        Project Grants/ Funding (Approved)
+        Courses
     </h2>
-    <!-- <span class="taught-heading">Courses Taught / Teaching</span> -->
-    <p class="education-info coursename project-text">
-        <b>1.</b>	Nvidia GPU seed grant, “Advanced blockchain algorithms for IoT”, Amount: Rs 1.5 Lakhs (Role: Principal Investigator), 2018-2019<br><br>
-        <b>2.</b>	Start up seed funding worth Rs. 7 Lakh from Pilani innovation and Entrepreneurship Development Society (PIEDS) for startup named Medsupervision Pvt. Ltd.  
-            Skills: 
-    </p>
-    <h2 class="info-subheading">
-        Awards / Honours: 
-    </h2>
-    <p class="education-info coursename project-text">
-        <b>1.</b> &nbsp;	Completed Ph.D. at JIIT in three years (with 4 SCI Journals).<br><br>
-        <b>2.</b>&nbsp;	Reviewer for the following journals: IEEE Transactions on Vehicular Technology(TVT),IEEE Journal on Selected Areas in Communications(JSAC), IEEE Transactions on Communications(ToC), IEEE Transactions on Sustainable Energy(TSE)<br><br>
-        <b>3.</b>&nbsp;	Article on Role of emerging technologies to tackle COVID 19 was featured by IEEE Access and was on the home page of the journal as featured article for 6 months. The article received 350 citations in just 6 months. <br><br>
-        <b>4.</b>&nbsp;	Acted as Technical program chair for SPIN-2021 conference for Blockchain track.<br><br>
-        <b>5.</b>&nbsp;	More than 1000 google scholar citations
+    <span class="taught-heading">Courses Taught / Teaching</span>
+    <p class="education-info coursename">
+    <?php
+            if($row != 0){
+                for($j=0;$j<$i;$j++){
+                    echo $course[$j];
+                }
+            }
+        ?>
     </p>
   
+    <h2 class="info-subheading">
+        Skills
+    </h2>
+    <p class="education-info coursename">
+        <i class="fas fa-hand-point-right" style="color:red;"></i> &nbsp;&nbsp; Python, R, Java, C/C++, Node Js, React JS, Ethereum, Hyper ledger Fabric, Solidity, LaTex, MATLAB    
+    </p>
 
 </section>
 <!-- ####################### CONTENT SECTION OVER ####################### -->
@@ -176,10 +195,10 @@
         <div class="col-xl-6 col-lg-8 col-md-12 col-12 adressive-block">
             <div class="for-bottom-logo">
                 <div class="for-bottom-image">
-                    <img src="media/logo.png" onclick="window.location.assign('https://www.jiit.ac.in/');"  alt="Jiit-logo" class="bottom-logo">
+                    <img src="media/<?php echo $logo; ?>" onclick="window.location.assign('https://www.jiit.ac.in/');"  alt="Jiit-logo" class="bottom-logo">
                 </div>
                 <div class="for-bottom-textimage">
-                    <img src="media/logo-right.png" alt="jiit" class="bottom-textlogo">
+                    <img src="media/<?php echo $sidelogo; ?>" alt="jiit" class="bottom-textlogo">
                 </div>
             </div>
             <address class="address-text">
@@ -192,25 +211,25 @@
         </div>
         <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12 links-block-1">
             <span class="quick-heading">Quick Links</span>
-            <span class="bolts">&compfn;</span><a href="index.html" ><span class="quick-item quick-1">Profile</span></a><br>
-            <span class="bolts">&compfn;</span><a href="course.html" ><span class="quick-item quick-2">Course</span></a><br>
-            <span class="bolts">&compfn;</span><a href="projects.html" ><span class="quick-item quick-3">Projects</span></a><br>
-            <span class="bolts">&compfn;</span><a href="collabration.html" ><span class="quick-item quick-4">Collabration</span></a><br>
+            <span class="bolts">&compfn;</span><a href="index.php" ><span class="quick-item quick-1">Profile</span></a><br>
+            <span class="bolts">&compfn;</span><a href="course.php" ><span class="quick-item quick-2">Course</span></a><br>
+            <span class="bolts">&compfn;</span><a href="projects.php" ><span class="quick-item quick-3">Projects</span></a><br>
+            <span class="bolts">&compfn;</span><a href="collabration.php" ><span class="quick-item quick-4">Collabration</span></a><br>
 
         </div>
         <div class="col-xl-2 col-lg-4  col-md-4 col-sm-4 col-12 links-block-1">
-            <span class="quick-heading">JIIT Links</span>
-            <span class="bolts">&compfn;</span><a href="https://www.jiit.ac.in/about-jiit" target="_blank" ><span class="quick-item quick-1">About JIIT</span></a><br>
-            <span class="bolts">&compfn;</span><a href="https://www.jiit.ac.in/governance-0"  target="_blank"><span class="quick-item quick-2">Governance</span></a><br>
-            <span class="bolts">&compfn;</span><a href="https://www.jiit.ac.in/teaching-methodology"  target="_blank"><span class="quick-item quick-3">Teaching Methodology</span></a><br>
-            <span class="bolts">&compfn;</span><a href="https://www.jiit.ac.in/contact-us"  target="_blank"><span class="quick-item quick-4">Contact Us</span></a><br>
+            <span class="quick-heading">Main Links</span>
+            <span class="bolts">&compfn;</span><a href="<?php echo $about_url; ?>" target="_blank" ><span class="quick-item quick-1">About</span></a><br>
+            <span class="bolts">&compfn;</span><a href="<?php echo $governance_url; ?>"  target="_blank"><span class="quick-item quick-2">Governance</span></a><br>
+            <span class="bolts">&compfn;</span><a href="<?php echo $teaching_methodology; ?>"  target="_blank"><span class="quick-item quick-3">Teaching Methodology</span></a><br>
+            <span class="bolts">&compfn;</span><a href="<?php echo $contact_url; ?>"  target="_blank"><span class="quick-item quick-4">Contact Us</span></a><br>
 
         </div>
         <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12 links-block-1">
             <span class="quick-heading">Home</span>
-            <span class="bolts">&compfn;</span><a href="https://www.jiit.ac.in/"  target="_blank"><span class="quick-item quick-1">University Home</span></a><br>
-            <span class="bolts">&compfn;</span><a href="https://www.jiit.ac.in/computer-science-it"  target="_blank"><span class="quick-item quick-2">Department Home</span></a><br>
-            <span class="bolts">&compfn;</span><a href="#Top" ><span class="quick-item quick-3">Back To Top</span></a><br>
+            <span class="bolts">&compfn;</span><a href="<?php echo $university_home; ?>"  target="_blank"><span class="quick-item quick-1">University Home</span></a><br>
+            <span class="bolts">&compfn;</span><a href="<?php echo $department_home; ?>"  target="_blank"><span class="quick-item quick-2">Department Home</span></a><br>
+            <span class="bolts">&compfn;</span><a href="#Top"><span class="quick-item quick-3">Back To Top</span></a><br>
         </div>
     </div>
 </footer>

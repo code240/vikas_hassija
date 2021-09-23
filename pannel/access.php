@@ -1,5 +1,9 @@
 <?php
   // error_reporting(0);
+  if(!isset($_COOKIE["access"])){
+    header( "refresh:0;url=index.php" );
+    exit;
+}
   include "database.php";
    $con = mysqli_connect($a,$b,$c,$d);
    if(!$con){
@@ -583,6 +587,12 @@ while($result = mysqli_fetch_assoc($data)){
                       <!-- &lt;b&gt;<b>FOR BOLD</b>&lt;/b&gt; <br> -->
                     </td>
                   </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>Logout</td>
+                    <td>Log out from pannel</td>
+                    <td><button class="btn btn-danger btn-edit" onclick="logout('access');">Logout</button></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -616,25 +626,28 @@ while($result = mysqli_fetch_assoc($data)){
         <div class="dotted-div">
                 <form action="backend/base-controller.php" name="form_url" onsubmit="return url_valid();" method="POST">
                   <div class="cloud-div"><img src="media/www.png" alt="cloud" class="cloud-img"></div>
-                  <input type="text" autocomplete="off" placeholder="Enter the url" style="padding-left:0.6rem;" name="url" id="img" class="input-file">
+                  <input type="text" autocomplete="off" placeholder="Enter the url" style="padding-left:0.6rem;" name="url"  class="input-file">
                   <input type="hidden"  name="what" id="what_url">
                   <input type="submit" value="Update" class="btn btn-upload">
                 </form>
           </div>
         </div>
     </div>
-
-
-      
+  <script>
+    function logout(name) {
+      document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      window.location.assign("index.php");
+    }
+  </script>
     <div class="black-fix" id="password">
         <div class="upload-div ps-div">
         <span class="cut-sign" onclick="dismiss_password();"><i class="far fa-times-circle"></i></span>
         <div class="dotted-div dotted-for-ps">
                 <form action="backend/base-controller.php" name="form_ps" onsubmit="return password_valid();" method="POST">
                   <div class="cloud-div"><img src="media/shield.png" alt="cloud" class="cloud-img"></div>
-                  <input type="password" placeholder="Old password" style="padding-left:0.6rem;" name="old" id="img" class="input-file input-ps input-1">
-                  <input type="password" placeholder="New Password" style="padding-left:0.6rem;" name="new" id="img" class="input-file input-ps">
-                  <input type="password" placeholder="Confirm Password" style="padding-left:0.6rem;" name="confirm" id="img" class="input-file input-ps">
+                  <input type="password" placeholder="Old password" style="padding-left:0.6rem;" name="old"  class="input-file input-ps input-1">
+                  <input type="password" placeholder="New Password" style="padding-left:0.6rem;" name="new"  class="input-file input-ps">
+                  <input type="password" placeholder="Confirm Password" style="padding-left:0.6rem;" name="confirm"  class="input-file input-ps">
                   <input type="hidden" name="what" id="what_ps">
                   <input type="submit" value="Change password" class="btn btn-upload btn-change">
                 </form>
@@ -649,7 +662,7 @@ while($result = mysqli_fetch_assoc($data)){
         <div class="dotted-div">
                 <form action="backend/base-controller.php" method="POST">
                   <div class="cloud-div"><img src="media/www.png" alt="cloud" class="cloud-img"></div>
-                  <input type="text" placeholder="Enter the url" style="padding-left:0.6rem;" name="url" id="img" class="input-file">
+                  <input type="text" placeholder="Enter the url" style="padding-left:0.6rem;" name="url"  class="input-file">
                   <input type="hidden" name="what" id="what_url">
                   <input type="submit" value="Update" class="btn btn-upload">
                 </form>

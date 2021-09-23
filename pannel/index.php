@@ -1,3 +1,9 @@
+<?php
+if(isset($_COOKIE["access"])){
+    header( "refresh:1;url=access.php" );
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

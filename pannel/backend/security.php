@@ -79,7 +79,7 @@
         if($login_attempt==2){
                 $get_name = "access";
                 $get_value = base64_encode("AdminTemp");
-                $get_hour =  time() + (60*60*24*365*2);
+                $get_hour =  time() + (60*60);
                 // setcookie($get_name,$get_value,$get_hour,"/");
                 echo "<script>log_access();</script>";
             }if($login_attempt==0){

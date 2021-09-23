@@ -43,7 +43,7 @@
         $q = "SELECT * FROM base";
         $data = mysqli_query($con,$q);
         while($r = mysqli_fetch_assoc($data)){
-            $password = base64_decode($r["password"]);
+            $password = base64_decode($r["user_password"]);
         }
         if($password != $old){
             echo "<h1>Old Password Dismatch!!! <span style='color:blue;'>Redirecting...</span></h1>";
@@ -56,7 +56,7 @@
             exit;
         }
         $encode_password = base64_encode($new);
-        $q = "UPDATE base SET password = '$encode_password' WHERE id = 1";
+        $q = "UPDATE base SET user_password = '$encode_password' WHERE id = 1";
         if(mysqli_query($con,$q)){
             echo "<h1> Change Successfully !!! <span style='color:blue;'>Redirecting...</span></h1>";
             header("Refresh:2; url=../access.php");

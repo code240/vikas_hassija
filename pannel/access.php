@@ -204,7 +204,7 @@ while($result = mysqli_fetch_assoc($data)){
   $contact_url = $result["contact_url"];
   $governance_url = $result["governance_url"];
   $teaching_method_url = $result["teaching_methodology_url"];
-  // $password = $result["password"];
+  // $password = $result["user_password"];
 }
 ?>
 
